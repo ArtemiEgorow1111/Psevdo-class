@@ -1,0 +1,70 @@
+.btn {
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 5px 10px;
+    background-color: green;
+    color: white;
+    /* Плавное изменения состояния */
+    transition: all 0.4s;
+    margin-bottom: 20px;
+}
+
+/* При наведение на элемент применить указанные свойства */
+.btn:hover {
+    background-color: rgb(4, 4, 253);
+}
+
+/* При клике на элемент и пока не отпустили кнопку мыши применить указаные свойтсва */
+.btn:active {
+    /* Масштаб */
+    scale: 0.90;
+}
+
+.form {
+    background-color: brown;
+    /* Чтобы форма занимала не всю ширину родителя а ровно столько места сколько нужно под ее содержимое устанавливаем: */
+    display: inline-block;
+    padding: 50px;
+    border-radius: 10px;
+    color: white;
+}
+
+.form-row {
+    margin-bottom: 20px;
+}
+
+.form-input {
+    /* Убрать рамку которая появляется в поле фокуса */
+    outline: none;
+    border: none;
+    /* Сделать нижнию границу прозрачной */
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    padding: 3px;
+}
+
+/* Когда поле находится в фокусе */
+.form-input:focus {
+    /* Стиль для нижний границы элемента */
+    border-bottom-color: red;
+}
+
+/* Стили для placeholder */
+.form-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Стили когда элемент находится в состоянии disabled */
+.btn-send:disabled {
+    background-color: rgba(255, 0, 0, 0.514);
+    color: white;
+}
+
+.check-wrap {
+    margin-bottom: 10px;
+}
+
+/* Стилизовать элемент span если он является соседом элемента с классом check который находиться в состояние checked */
+.check:checked+span {
+    color: orange;
+}
